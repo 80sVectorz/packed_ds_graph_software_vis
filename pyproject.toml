@@ -1,0 +1,28 @@
+[project]
+name = "packed-ds-graph-software-vis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "80sVectorz", email = "66908776+80sVectorz@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy",
+    "numba",
+    "PySide6",
+    "packed-data-structures",
+]
+
+[tool.uv.sources]
+packed-data-structures = { path = "../packed_data_structures", editable = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+extraPaths = ["examples"]
+
+[tool.ty.environment]
+extra-paths = ["examples"]
