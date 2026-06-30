@@ -52,8 +52,8 @@ class NodePhysicsFeature[T: np.generic](GraphFeature):
     injects the parameterized DataColSchema singletons into the subclass.
     """
 
-    pos: DataColSchema[T, tuple[int]]
-    vel: DataColSchema[T, tuple[int]]
+    pos: DataColSchema[T, int]
+    vel: DataColSchema[T, int]
     fixed: DataColSchema[np.uint8]
 
     def __init_subclass__(
